@@ -1,0 +1,102 @@
+﻿body {
+	
+}
+
+.pagealign {
+	text-align: center;
+}
+
+.setmargin {
+	margin-left: 0px;
+}
+
+
+.basestyle {
+	height: 640px;
+	width: 900px;
+	margin: 50px;
+	border-radius: 5px;
+	border-color: #a9a5a5;
+	border-style: solid;
+}
+.searchstyle {
+	margin-right: 86px;
+	margin-top: 10px;
+}
+
+.serchInput {
+	width: 700px;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+
+.listgroup {
+	margin-bottom: 20px;
+	padding-left: 100px;
+	margin-top: 20px;
+	margin-right: 30px;
+	padding-right: 20px;
+	height:400px;
+	overflow:auto;
+}
+
+.listitem {
+	
+}
+
+.set_height {
+	height: 100px;
+}
+.set_width {
+	width:150px;
+}
+
+.float {
+
+	float:right;
+}
+
+.labelalign{
+	margin-left: 110px;
+	margin-top: 20px;
+}
+
+.box {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.blue {
+	background: #13b4ff;
+}
+
+.purple {
+	background: #ab3fdd;
+}
+
+.wine {
+	background: #ae163e;
+}
+.green {
+	background: #4caf50;
+}
+.yellow {
+	background: #ff9800;
+
+}
+.red {
+	background:#ec0c59;
+}
+.brown {
+	background: #795548;
+}
+.pink {
+	background: #ef5d8b;
+}
+
+.black {
+	background: #21110b;
+}

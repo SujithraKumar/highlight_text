@@ -1,0 +1,56 @@
+﻿
+<div>
+
+
+	<div class="basestyle">
+		<label> USER SAYS</label>
+		<input type="text" class="serchInput" ng-model="search.text" ng-keyup="$event.keyCode == 13 ? AddToNLPList(search.text) : null" />
+		<br />
+		<label class="labelalign">Label: &nbsp;</label><span>{{UseAsLable}}</span>
+		<input type="text"	class="searchstyle float" ng-model="searchWord" placeholder="search" />
+		<ul class="list-group listgroup">
+			<li ng-repeat="list in  NLPLists | filter:searchWord |startFrom:currentPage*pageSize | limitTo:pageSize  track by $index"  class="list-group-item">
+				<span id="{{'list_'+$index}}" ng-mouseup="getElementPosition(list,$index,$event)">{{list}}</span>
+
+				<button type="button" class="btn btn-danger float" ng-click="Delete(list)">Delete</button>
+
+				<button type="button" class="btn btn-light float" ng-click="useAsLabel(list)">Use as Label</button>
+			</li>
+		</ul>
+
+		<div class="pagealign">
+			<button type="button" class="btn btn-light" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><<</button>
+
+			{{currentPage+1}}/{{numberOfPages()}}
+
+			<button type="button" class="btn btn-light" ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">>></button>
+
+
+		</div>
+	</div>
+
+
+	<div class="modal fade bd-example-modal-sm" id="palletModal" ng-show="openPallet" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="row setmargin" >
+					<div class="box col-md-4" ng-repeat="paletterColor in paletterColors" ng-class="paletterColor" ng-click="setContentBackground(paletterColor)"></div>
+					<br />
+					<button type="button" class="btn btn-light pagealign" ng-click="setContentBackground('white')">Remove color</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+ <script type="text/javascript">
+	$(document).ready(function () {
+		$('.modal').modal();
+
+
+	});
+
+ </script>

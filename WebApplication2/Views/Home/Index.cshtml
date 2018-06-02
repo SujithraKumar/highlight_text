@@ -1,0 +1,44 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" ng-app="SearchApp">
+<head>
+	<!-- Common Meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+	<!-- Site Title -->
+	<title id="s_title"></title>
+
+	<script src="~/app/assets/js/jquery-1.11.2.min.js"></script>
+	<script src="~/app/assets/js/bootstrap.min.js"></script>
+	<link href="~/app/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="~/app/search/search.css" rel="stylesheet" type="text/css" />
+	<script src="~/app/assets/js/angular.min.js"></script>
+	<script src="~/app/module.js"></script>
+	<script src="~/app/controller.js"></script>
+	<script src="~/app/filter.js"></script>
+	<script src="~/app/directive.js"></script>
+
+
+
+
+
+</head>
+
+<body ng-controller="SearchController" class=" ">
+
+	<search-list></search-list>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.modal').modal();
+	
+
+	});
+
+</script>
